@@ -2,7 +2,6 @@ import xmlrpclib
 import odoorpc
 import string
 import random
-import pdb
 
 url = 'chocotech.trustcode.com.br'
 uid = 'demo'
@@ -41,7 +40,6 @@ def products_values():
         price_product = sale_order['total_bruto']
         if name_product != False:
             print("Produto: %s - Preco: %s reais" % (name_product[1], price_product))
-            #pdb.set_trace()
 
 if __name__ == '__main__':
 	products_values()
