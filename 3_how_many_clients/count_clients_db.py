@@ -9,7 +9,7 @@ def count_clients():
     db_list = odoo.db.list()
     db = db_list[5]
     odoo.login(db, 'demo', 'demo')
-    list_records = odoo.execute_kw('res.partner', 'search_count',[[['is_company', '=', True], ['customer', '=', True]]])
+    list_records = odoo.execute_kw('res.partner', 'search_count',[[['customer', '=', True]]])
     return list_records
 
 if __name__ == '__main__':
